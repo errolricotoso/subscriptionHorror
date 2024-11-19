@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html class="js">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HALMAW - Coming Soon Page</title>
+
+	<!-- Stylesheets -->
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/gallery.css">
+
+	<!-- Google Fonts -->
+
+	<link
+		href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic|Cinzel:400,700,900'
+		rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<div id="preloader"></div>
+
+	<section id="video-wrap">
+		<div id="video"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="logo text-center wow fadeInDown">
+						<a href="#"><img src="assets/logo.png" width="270" alt="Layla"></a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-7 wow fadeInLeft" style="z-index: 9999;">
+					<div class="headline-wrap">
+						<h1 class="headline">
+							Brace Yourself for a <br>
+							<span class="quotes">Spooky</span>
+							<span class="quotes">Creepy</span>
+							<span class="quotes">Haunting</span>
+							<span class="quotes">Chilling</span>
+							<span class="quotes">Eerie</span>
+							<span class="quotes">Frightening</span>
+							<span class="quotes">Macabre</span>
+							<br>
+							Subscribe and Stay Haunted.
+						</h1>
+
+						<form role="form" id="subscribe-form" class="row">
+							<div class="form-group col-xs-10">
+								<input type="email" name="email" class="form-control mc-email" id="subscriber-email"
+									placeholder="Email" required>
+							</div>
+							<div class="form-group col-xs-2 push-btn-left">
+								<button id="subscribe-button" type="submit" class="btn btn-default mc-btn">
+									<i class="ion-paper-airplane"></i>
+								</button>
+							</div>
+						</form>
+						<!-- SUCCESS OR ERROR MESSAGES -->
+						<div id="subscription-response"></div>
+					</div>
+				</div>
+				<div class="col-md-5  wow fadeInRight">
+					<div class="clock row">
+						<div class="col-xs-3 col-sm-3 col-md-6">
+							<div class="countdown-time-value clock-item clock-days">
+								<div class="wrap">
+									<div class="inner">
+										<div id="canvas-days" class="clock-canvas"></div>
+
+										<div class="text">
+											<p class="val">0</p>
+											<p class="type-days type-time">DAYS</p>
+										</div><!-- /.text -->
+									</div><!-- /.inner -->
+								</div><!-- /.wrap -->
+							</div>
+						</div><!-- /.clock-item -->
+
+						<div class="col-xs-3 col-sm-3 col-md-6">
+							<div class="clock-item clock-hours countdown-time-value">
+								<div class="wrap">
+									<div class="inner">
+										<div id="canvas-hours" class="clock-canvas"></div>
+
+										<div class="text">
+											<p class="val">0</p>
+											<p class="type-hours type-time">HOURS</p>
+										</div><!-- /.text -->
+									</div><!-- /.inner -->
+								</div><!-- /.wrap -->
+							</div>
+						</div><!-- /.clock-item -->
+
+						<div class="col-xs-3 col-sm-3 col-md-6">
+							<div class="clock-item clock-minutes countdown-time-value">
+								<div class="wrap">
+									<div class="inner">
+										<div id="canvas-minutes" class="clock-canvas"></div>
+
+										<div class="text">
+											<p class="val">0</p>
+											<p class="type-minutes type-time">MINUTES</p>
+										</div><!-- /.text -->
+									</div><!-- /.inner -->
+								</div><!-- /.wrap -->
+							</div>
+						</div><!-- /.clock-item -->
+
+						<div class="col-xs-3 col-sm-3 col-md-6">
+							<div class="clock-item clock-seconds countdown-time-value">
+								<div class="wrap">
+									<div class="inner">
+										<div id="canvas-seconds" class="clock-canvas"></div>
+
+										<div class="text">
+											<p class="val">0</p>
+											<p class="type-seconds type-time">SECONDS</p>
+										</div><!-- /.text -->
+									</div><!-- /.inner -->
+								</div><!-- /.wrap -->
+							</div>
+						</div><!-- /.clock-item -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="arrow-down text-center">
+			<a href="#nav-menu" class="wow bounce" data-wow-duration="4s" data-wow-delay="1s"
+				data-wow-iteration="1000"><i class="ion-chevron-down"></i></a>
+		</div>
+	</section>
+
+	<section>
+		<nav id="nav-menu" class="navbar nav-layla" role="navigation">
+
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".main-nav">
+					<i class="ion-navicon"></i>
+				</button>
+				<a class="navbar-brand" href="#">HALMAW</a>
+			</div>
+
+			<div class="collapse navbar-collapse main-nav">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#wrap">Top</a><span class="hover-li"></span></li>
+					<li><a href="#about">About</a><span class="hover-li"></span></li>
+					<li><a href="#contact">Contact</a><span class="hover-li"></span></li>
+					<li><a href="#subscription-plans">Subcribe</a><span class="hover-li"></span></li>
+					<li><a href="#login">Login</a></li>
+
+				</ul>
+			</div>
+		</nav>
+	</section>
+
+
+
+	<section id="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="title text-center wow zoomIn">
+						<h1>ABOUT</h1>
+						<span class="title line"></span>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6 text-center wow fadeInLeft">
+					<img src="assets/lady.jpg" alt="Jane Doe" class="img-responsive portrait">
+				</div>
+				<div class="col-sm-6 wow fadeInRight">
+					<div class="about-text">
+						<p>Welcome to <strong>HALMAW</strong>, the haunted house in San Vicente where nightmares come to
+							life. Once you step inside, prepare to encounter spine-chilling spirits, lost souls, and
+							shadows lurking in every corner. Do you dare to face the horrors that await?</p>
+
+						<p>Rumored to be cursed, <strong>HALMAW</strong> has been abandoned for centuries, with whispers
+							of ghostly figures and eerie sounds that have haunted this place for generations. Each room
+							reveals a new terror, with mysteries that have left even the bravest trembling.</p>
+
+						<p>Enter if you dare, but beware—the spirits here have a way of trapping those who wander too
+							far. Are you ready to face your fears? Embrace the darkness and join us… if you’re brave
+							enough to last until the end.</p>
+					</div>
+
+				</div>
+			</div>
+	</section>
+
+	<section id="gallery" class="spaced-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="title text-center wow zoomIn">
+						<h1>EXPLORE THE HORRORS</h1>
+						<span class="title line"></span>
+						<p>Take a glimpse into the chilling areas of HALMAW</p>
+					</div>
+				</div>
+			</div>
+			<div class="row gallery-grid">
+				<!-- Gallery Item -->
+				<div class="col-md-4 col-sm-4 col-xs-6 wow fadeInUp" data-wow-delay="0.2s">
+					<div class="gallery-item">
+						<img src="https://t4.ftcdn.net/jpg/06/24/21/55/360_F_624215589_gBkIkAewfBR64Ba0x3WAz8LOSgZBHjrZ.jpg" alt="Haunted Hallway" class="img-responsive">
+						<div class="overlay">
+							<div class="overlay-text">
+								<h3>Haunted Hallway</h3>
+								<p>Beware the whispers that follow you...</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Gallery Item -->
+				<div class="col-md-4 col-sm-4 col-xs-6 wow fadeInUp" data-wow-delay="0.4s">
+					<div class="gallery-item">
+						<img src="assets/peter-herrmann-M9LFUeTpe3I-unsplash.jpg" alt="Phantom Room" class="img-responsive">
+						<div class="overlay">
+							<div class="overlay-text">
+								<h3>Phantom Room</h3>
+								<p>Home to restless spirits and endless shadows.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Gallery Item -->
+				<div class="col-md-4 col-sm-4 col-xs-6 wow fadeInUp" data-wow-delay="0.6s">
+					<div class="gallery-item">
+						<img src="assets/peter-herrmann-xZfdoXQf1VE-unsplash.jpg" alt="Eerie Cellar" class="img-responsive">
+						<div class="overlay">
+							<div class="overlay-text">
+								<h3>Eerie Cellar</h3>
+								<p>The echoes of forgotten cries linger here.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Gallery Item -->
+				<div class="col-md-4 col-sm-4 col-xs-6 wow fadeInUp" data-wow-delay="0.8s">
+					<div class="gallery-item">
+						<img src="assets/peter-herrmann-lhp-doi4gLc-unsplash (1).jpg" alt="Haunted Bathroom" class="img-responsive">
+						<div class="overlay">
+							<div class="overlay-text">
+								<h3>Haunted Bathroom</h3>
+								<p>Echoes of whispers and dripping water fill the silence.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Gallery Item -->
+				<div class="col-md-4 col-sm-4 col-xs-6 wow fadeInUp" data-wow-delay="1s">
+					<div class="gallery-item">
+						<img src="assets/gaurav-joshi-vKtSZA6SQag-unsplash.jpg" alt="Gloomy Garden" class="img-responsive">
+						<div class="overlay">
+							<div class="overlay-text">
+								<h3>Gloomy Garden</h3>
+								<p>A place where beauty hides terror within.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Gallery Item -->
+				<div class="col-md-4 col-sm-4 col-xs-6 wow fadeInUp" data-wow-delay="1.2s">
+					<div class="gallery-item">
+						<img src="https://i0.wp.com/marriedtohorror.com/wp-content/uploads/2022/05/STAIRS_Horror-Short-Story-Image_%D0%B5%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D0%B8%CC%86-%D1%88%D1%83%D1%85%D0%BC%D0%B0%D0%BD.jpg?fit=1200%2C675&ssl=1" alt="Spectral Staircase" class="img-responsive">
+						<div class="overlay">
+							<div class="overlay-text">
+								<h3>Spectral Staircase</h3>
+								<p>Step carefully; the spirits may not let you descend.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+
+	<section id="subscription-plans" class="spaced-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="title text-center wow zoomIn">
+						<h1>SUBSCRIPTION PLANS</h1>
+						<span class="title line"></span>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<!-- Shadow Pass Plan -->
+				<div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+					<div class="plan text-center plan-hover">
+						<h3 class="plan-title">Shadow Pass</h3>
+						<p class="plan-price">₱100.00</p>
+						<ul class="plan-features">
+							<li>Access to haunted house</li>
+							<li>Basic scares and thrills</li>
+							<li>Email support</li>
+						</ul>
+						<a href="../payment.html?plan=Shadow%20Pass&price=100">
+							<button class="btn btn-primary btn-subscribe">Subscribe</button>
+						</a>
+					</div>
+				</div>
+
+				<!-- Phantom Tier Plan -->
+				<div class="col-md-4 wow fadeInUp" data-wow-delay="0.6s">
+					<div class="plan text-center plan-hover">
+						<h3 class="plan-title">Phantom Tier</h3>
+						<p class="plan-price">₱300.00</p>
+						<ul class="plan-features">
+							<li>All Shadow Pass features</li>
+							<li>Exclusive scare zones</li>
+							<li>Priority entry</li>
+							<li>Newsletter subscription</li>
+						</ul>
+						<a href="../payment.html?plan=Phantom%20Tier&price=300">
+							<button class="btn btn-primary btn-subscribe">Subscribe</button>
+						</a>
+					</div>
+				</div>
+
+				<!-- Eternal Darkness Plan -->
+				<div class="col-md-4 wow fadeInUp" data-wow-delay="0.4s">
+					<div class="plan text-center plan-hover featured-plan">
+						<h3 class="plan-title">Eternal Darkness</h3>
+						<p class="plan-price">₱500.00</p>
+						<ul class="plan-features">
+							<li>All Phantom Tier perks</li>
+							<li>Guided tour with scare actors</li>
+							<li>Access to hidden rooms</li>
+							<li>VIP badge and goodies</li>
+						</ul>
+						<a href="../payment.html?plan=Eternal%20Darkness&price=500">
+							<button class="btn btn-primary btn-subscribe">Subscribe</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<section id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="title text-center wow zoomIn">
+						<h1>CONTACT US</h1>
+						<span class="title line"></span>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6 wow fadeInLeft">
+					<p>Send us your Query. Drop your Message</p>
+					<form id="contact-form" method="post" class="form afsana-form" role="form">
+						<div class="row">
+							<div class="col-sm-12 form-group">
+								<input class="form-control afsana-style" id="name" name="name" placeholder="Name"
+									type="text" required autofocus />
+							</div>
+							<div class="col-sm-12 form-group">
+								<input class="form-control afsana-style" id="email" name="email" placeholder="Email"
+									type="email" required />
+							</div>
+							<div class="col-sm-12 form-group">
+								<textarea class="form-control" id="message" name="message" placeholder="Message"
+									rows="5"></textarea>
+							</div>
+							<div class="col-sm-12 form-group">
+								<button class="btn btn-primary afsana-btn" type="submit">Submit <i
+										class="ion-arrow-graph-up-right"></i></button>
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<div class="col-sm-6  wow fadeInRight">
+					<p>Like us on Facebook and Stay updated.</p>
+					<div class="social-icons">
+						<ul>
+							<li class="facebook wow fadeInUp" data-wow-delay="1.1s"><a href="#"><i
+										class="ion-social-facebook"></i></a></li>
+							<li class="googleplus wow fadeInUp" data-wow-delay="1.3s"><a href="#"><i
+										class="ion-social-googleplus"></i></a></li>
+							<li class="youtube wow fadeInUp" data-wow-delay="1.7s"><a href="#"><i
+										class="ion-social-youtube"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8">
+					<p class="copyright text-left">HALMAW 2024. All rights reserved.</p>
+				</div>
+				<div class="col-sm-4">
+					<p class="copyright text-right">Sponsored by <a href="https://vivamax.com">VivaMax</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<script src="js/modernizr.custom.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.videoBG.js"></script>
+	<script src="js/jquery.sticky-kit.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/kinetic.js"></script>
+	<script src="js/jquery.final-countdown.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

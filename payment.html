@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f9f4;
+            color: #1f3b4d;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #531210;
+            text-align: center;
+            margin-top: 40px;
+            font-size: 2.5rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .payment-container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border: 2px solid #531210;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .form-group:nth-child(odd) {
+            animation-delay: 0.4s;
+        }
+
+        .form-group:nth-child(even) {
+            animation-delay: 0.6s;
+        }
+
+        label {
+            color: #531210;
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"], input[type="number"], input[type="file"], input[type="email"], select {
+            width: 90%;
+            padding: 12px 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, select:focus {
+            border-color: #531210;
+            box-shadow: 0 0 8px rgba(83, 18, 16, 0.2);
+        }
+
+        .form-group button {
+            background-color: #531210;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-group button:hover {
+            background-color: #7a1f1b;
+        }
+
+        .payment-option {
+            margin-top: 20px;
+            display: none;
+        }
+
+        .qr-code {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .qr-code img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .qr-code img:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+   
+    <h1>Payment Form</h1>
+
+    <div class="payment-container">
+        <form action="" method="POST" enctype="multipart/form-data">
+            <!-- Plan Information (Dynamic) -->
+            <div class="form-group">
+                <label for="plan-name">Selected Plan</label>
+                <input type="text" id="plan-name" name="plan-name" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="plan-price">Price</label>
+                <input type="text" id="plan-price" name="plan-price" readonly>
+            </div>
+
+            <!-- Personal Information Section -->
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" placeholder="Enter Full Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone" placeholder="Enter Your Phone Number" required>
+            </div>
+
+            <!-- Payment Method Section -->
+            <div class="form-group">
+                <label for="payment-method">Payment Method</label>
+                <select id="payment-method" name="payment-method">
+                    <option value="card">Credit/Debit Card</option>
+                    <option value="gcash">GCash</option>
+                </select>
+            </div>
+
+            <!-- Card Payment Details -->
+            <div id="card-details" class="payment-option">
+                <div class="form-group">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="Enter Card Number" required>
+                </div>
+                <div class="form-group">
+                    <label for="expiry-date">Expiry Date</label>
+                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="number" id="cvv" name="cvv" placeholder="CVV" required>
+                </div>
+            </div>
+
+            <!-- GCash Payment Details -->
+            <div id="gcash-details" class="payment-option">
+                <div class="form-group">
+                    <label for="gcash-number">GCash Number</label>
+                    <input type="text" id="gcash-number" name="gcash-number" value="09171234567" readonly>
+                </div>
+
+                <!-- Displaying the QR Code -->
+                <div class="qr-code">
+                    <label for="gcash-qr">Scan the GCash QR Code to Pay</label>
+                    <img src="path-to-your-gcash-qr-code.png" alt="GCash QR Code">
+                </div>
+
+                <!-- File Input for Proof of Payment -->
+                <div class="form-group">
+                    <label for="gcash-proof">Upload Proof of Payment (GCash Screenshot)</label>
+                    <input type="file" id="gcash-proof" name="gcash-proof" accept="image/*" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Submit Payment</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Retrieve the plan and price from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const plan = urlParams.get('plan');
+        const price = urlParams.get('price');
+
+        // Display the selected plan and price
+        document.getElementById('plan-name').value = plan;
+        document.getElementById('plan-price').value = '₱' + price;
+        
+        document.getElementById('payment-method').addEventListener('change', function () {
+            if (this.value === 'card') {
+                document.getElementById('card-details').style.display = 'block';
+                document.getElementById('gcash-details').style.display = 'none';
+            } else {
+                document.getElementById('card-details').style.display = 'none';
+                document.getElementById('gcash-details').style.display = 'block';
+            }
+        });
+    </script>
+
+</body>
+</html>
